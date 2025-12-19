@@ -52,7 +52,7 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster worthy-lion-bsqzm1 \
-            --service housing-api-service \
+            --service housing-api-service-service-ynifygb9 \
             --force-new-deployment
 
       # Deploy to ECS - Streamlit
@@ -60,6 +60,6 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster worthy-lion-bsqzm1 \
-            --service housing-streamlit-service \
+            --service housing-streamlit-service-cyjcu14c \
             --force-new-deployment
             
