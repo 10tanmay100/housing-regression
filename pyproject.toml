@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "your-ml-project"
+version = "0.1.0"
+description = "Your ML project description"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

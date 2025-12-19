@@ -1,0 +1,22 @@
+ipykernel
+pandas
+numpy
+matplotlib
+scikit-learn
+seaborn
+requests
+flask
+sqlalchemy
+fastapi
+uvicorn
+pytest
+great_expectations
+plotly
+nbformat>=4.2.0
+category-encoders
+xgboost
+mlflow
+optuna
+boto3
+streamlit
+-e .
