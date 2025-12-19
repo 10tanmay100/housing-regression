@@ -6,13 +6,13 @@ WORKDIR /app
 
 # Copy dependency files first (better caching)
 COPY pyproject.toml ./
-
+COPY . .
 # Install uv (dependency manager)
 RUN pip install -r requirements.txt
 RUN uv sync --frozen --no-dev
 
 # Copy project files
-COPY . .
+
 
 # Expose FastAPI default port
 EXPOSE 8000
