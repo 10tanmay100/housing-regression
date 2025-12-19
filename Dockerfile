@@ -9,7 +9,6 @@ COPY pyproject.toml ./
 COPY . .
 # Install uv (dependency manager)
 RUN pip install -r requirements.txt
-RUN uv sync --frozen --no-dev
 
 # Copy project files
 

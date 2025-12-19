@@ -9,11 +9,8 @@ WORKDIR /app
 # Copy the app (and data needed by the app)
 COPY . .
 # Install uv and project deps (from pyproject.toml)
-COPY pyproject.toml uv.lock* ./
-RUN pip install --no-cache-dir uv \
- && uv pip install --system .
-
-
+COPY pyproject.toml  ./
+RUN pip install -r requirements.txt
 
 # Streamlit config
 ENV STREAMLIT_SERVER_PORT=8501 \
